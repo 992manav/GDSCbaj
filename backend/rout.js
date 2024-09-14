@@ -11,7 +11,7 @@ const sendMail = require('./sendMail');
 
 
 //6LcfCBoqAAAAAN7pzJHXJrar6LNvzRr66xC_Uh_X
-const googlesecret = "6Ld2hR0qAAAAADK4cGJZ1zPUIpo5FIhQzLtJKlSj";
+const googlesecret = "6LeKUkMqAAAAAAKFXVeTYX6wamZd_vA-lmzMXbxQ";
 const app = express();
 
 mongoose.connect('mongodb+srv://adityabajpayee7:qpgNZTuia1cQTJc1@cluster0.m5acueb.mongodb.net/gdsc')
@@ -69,7 +69,7 @@ app.post("/signup", async (req,res)=>{
                         }
                         const user = await User.create({name, email, password,usertype});
                         sendMail(email,`Welcome to the Website ${usertype}`,`HI , ${name} thankyou for registering. Please Signin using the link below`,
-                            ` click http://localhost:5173/signin`
+                            ` click "https://GDSCbajpayee/onrender.com/signin"`
                         );
                         res.status(200).json(user);
                     }
