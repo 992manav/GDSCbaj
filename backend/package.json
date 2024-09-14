@@ -1,5 +1,9 @@
 {
   "dependencies": {
+    "scripts": {
+      "start": "node server.js"
+    },
+
     "axios": "^1.7.2",
     "cors": "^2.8.5",
     "express": "^4.19.2",
